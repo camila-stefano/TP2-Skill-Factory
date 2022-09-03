@@ -1,0 +1,3 @@
+const Table = () => {
+  return "";
+};
