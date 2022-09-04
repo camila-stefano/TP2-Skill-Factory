@@ -12,21 +12,42 @@
   --medium-purple: rgba(164, 115, 255, 1);
 }
 
-body {
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/images/mountains-bg.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* body {
   display: grid;
   grid-template-rows: 10rem 1fr 5rem;
   height: 100vh;
   align-items: center;
-  background: url(../images/mountains-bg.jpg);
-  background-size: cover;
-  background-position: fixed;
-  background-repeat: no-repeat;
   color: var(--aquamarine);
   font-family: "Changa", sans-serif;
   padding: 2rem 0rem;
   position: relative;
+} */
+
+.navBar {
+  width: 100%;
+  color: var(--aquamarine);
+  align-items: center;
+  padding: 0 15%;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(127, 195, 189);
 }
 
+.navBar > * {
+  color: var(--aquamarine);
+}
 .bg-img {
   background: linear-gradient(var(--dark-purple), var(--royal-purple));
   mix-blend-mode: overlay;
@@ -50,7 +71,6 @@ header {
 
 header h1 {
   font-size: 3rem;
-  line-height: 2.5rem;
 }
 
 header h2 {
@@ -60,6 +80,7 @@ header h2 {
 .btn-container {
   display: flex;
   align-items: center;
+  margin-top: 10%;
   height: auto;
   justify-content: center;
   gap: 5rem;
@@ -88,6 +109,13 @@ a {
 .main-btn:hover {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(12, 255, 154, 0.3));
   transition: 2s;
+}
+.home-h1 {
+  font-family: "Changa", sans-serif;
+  color: var(--aquamarine);
+}
+.home-h2 {
+  color: var(--aquamarine);
 }
 
 .upper-gradient {

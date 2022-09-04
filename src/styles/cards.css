@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Get Schwifty";
-  src: url("../fonts/get_schwifty.ttf");
+  src: url("../assets/fonts/get_schwifty.ttf");
   font-weight: 700;
   font-style: normal;
 }
@@ -21,6 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.square {
+  width: 500px;
+  height: 500px;
+  background-color: black;
 }
 
 body {
@@ -55,17 +61,17 @@ body {
   position: fixed;
 }
 
-h1 {
+cards-page-h1 {
   font-family: "Get Schwifty", "Changa", sans-serif;
   font-size: 6rem;
   position: fixed;
-  margin: 4% 0 0 4%;
+  margin: 2% 0 0 4%;
   color: rgb(131, 255, 218);
   text-shadow: 1px 1px 100px rgb(0, 207, 121);
   animation: text-pulse 2s infinite;
 }
 
-h1 span {
+cards-page-h1 span {
   font-size: 0.6em;
 }
 
@@ -306,6 +312,7 @@ footer {
   width: 120px;
   height: 120px;
   top: 0;
+  border: 1px solid red;
 }
 
 .scrollUpBtn {
