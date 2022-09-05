@@ -1,6 +1,7 @@
 import { useState } from "react";
-import CardsMenu from "./CardsMenu";
 import axios from "axios";
+import "./styles.css";
+import CardsMenu from "./CardsMenu";
 
 const RickAndMorty = () => {
   const [amount, setAmount] = useState(20);
@@ -23,7 +24,7 @@ const RickAndMorty = () => {
 
   return (
     <div styles="width: 100%; height: 100%">
-      <img src="../assets/images/rick.jpg" id='bg-img' alt="" />
+      <img src="../assets/images/rick-hanging-png.png" id="bg-img" alt="" />
       <div className="main-container">
         <div className="leftSide">
           <CardsMenu

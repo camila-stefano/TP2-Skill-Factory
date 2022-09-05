@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Users from "./components/Users";
+import Users from "./pages/Users";
 import Contact from "./pages/Contact";
-import RickAndMorty from "./components/RickAndMorty";
+import RickAndMorty from "./pages/RickAndMorty";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
 // import axios from "axios";
 

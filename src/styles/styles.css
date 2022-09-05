@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500&display=swap");
 
-:root {
-  --aquamarine: rgba(113, 255, 208, 1);
-  --medium-spring-green: rgba(12, 255, 154, 1);
-  --blue-sapphire: rgba(4, 92, 114, 1);
-  --dark-purple: rgba(62, 43, 66, 1);
-  --royal-purple: rgba(128, 76, 158, 1);
-  --medium-purple: rgba(164, 115, 255, 1);
-}
+
 
 * {
   margin: 0;

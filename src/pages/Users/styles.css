@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background: url(../images/mountains-bg.jpg);
+  background: url(../../assets/images/mountains-bg.jpg);
   background-size: cover;
   background-position: fixed;
   color: var(--aquamarine);

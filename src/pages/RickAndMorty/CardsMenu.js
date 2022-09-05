@@ -1,8 +1,7 @@
-import "../styles/cards.css";
+import "./styles.css";
 import Card from "./Card";
 
 const CardsMenu = ({ getCharacters, amount, setAmount }) => {
-  
   const displayCards = async (amount) => {
     const characters = await getCharacters(amount);
     console.log("displayCards executing");
@@ -18,20 +17,16 @@ const CardsMenu = ({ getCharacters, amount, setAmount }) => {
       );
     });
   };
-console.log('amount', amount)
+  console.log("amount", amount);
   return (
     <div>
       <div id="titulo">
-        <h1 className='cards-page-h1'>
+        <h1 className="cards-page-h1">
           Rick <span>and</span> Morty
         </h1>
       </div>
       <div className="menu">
-        <img
-          className="hangingRick"
-          src='../'
-          alt=""
-        />
+        <img className="hangingRick" src="../" alt="" />
         <label htmlFor="cards-amount">
           Number of characters
           <br />
