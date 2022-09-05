@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Users from "./components/Users";
-import Form from "./components/Form";
+import Contact from "./pages/Contact";
 import RickAndMorty from "./components/RickAndMorty";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -13,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Home />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/users" element={<Users />} />
         <Route path="/rick-and-morty" element={<RickAndMorty />} />
       </Routes>
