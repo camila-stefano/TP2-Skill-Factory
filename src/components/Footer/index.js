@@ -4,7 +4,7 @@ import "./styles.css";
 const Footer = () => {
   return (
     <footer>
-      <p class="footer-text">Made by Alan Vilalte & Cami Stéfano</p>
+      <p className="footer-text">Made by Alan Vilalte & Cami Stéfano</p>
     </footer>
   );
 };

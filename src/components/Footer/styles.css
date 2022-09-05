@@ -11,6 +11,6 @@ footer {
   bottom: 0;
   left: 0;
   position: fixed;
-  z-index: 5;
+  z-index: 0;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.12));
 }

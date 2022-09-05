@@ -23,7 +23,7 @@ const RickAndMorty = () => {
   };
 
   return (
-    <div styles="width: 100%; height: 100%">
+    <div className="RickAndMorty">
       <img src="../assets/images/rick-hanging-png.png" id="bg-img" alt="" />
       <div className="main-container">
         <div className="leftSide">

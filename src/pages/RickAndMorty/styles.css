@@ -11,29 +11,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --aquamarine: rgba(113, 255, 208, 1);
-  --medium-spring-green: rgba(12, 255, 154, 1);
-  --blue-sapphire: rgba(4, 92, 114, 1);
-  --dark-purple: rgba(62, 43, 66, 1);
-  --royal-purple: rgba(128, 76, 158, 1);
-  --medium-purple: rgba(164, 115, 255, 1);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.square {
-  width: 500px;
-  height: 500px;
-  background-color: black;
-}
-
-body {
+.RickAndMorty {
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: url("../../assets/images/rick.jpg");
   align-items: center;
   font-family: "Changa", sans-serif;
   overflow-x: hidden;
@@ -61,17 +50,17 @@ body {
   position: fixed;
 }
 
-cards-page-h1 {
+.cards-page-h1 {
   font-family: "Get Schwifty", "Changa", sans-serif;
-  font-size: 6rem;
-  position: fixed;
+  font-size: 5.5rem;
+  position: static;
   margin: 2% 0 0 4%;
   color: rgb(131, 255, 218);
   text-shadow: 1px 1px 100px rgb(0, 207, 121);
   animation: text-pulse 2s infinite;
 }
 
-cards-page-h1 span {
+.cards-page-h1 span {
   font-size: 0.6em;
 }
 
@@ -198,7 +187,7 @@ cards-page-h1 span {
   }
 }
 
-.menu {
+.cards-menu {
   font-size: 1.3rem;
   text-align: center;
   display: flex;
@@ -210,11 +199,10 @@ cards-page-h1 span {
   align-self: flex-end;
   right: 2rem;
   gap: 1.2rem;
-  margin-top: 13%;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
-.menu button {
+.cards-menu button {
   background: none;
   border: 2px solid rgb(12, 255, 154);
   border-bottom: 2px solid rgb(164, 115, 255);
@@ -262,15 +250,15 @@ footer {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.15));
 }
 
-.menu button:nth-of-type(3) {
+.cards-menu button:nth-of-type(3) {
   background-color: rgba(76, 54, 179, 0.418);
 }
 
-.menu label {
+.cards-menu label {
   font-size: 1.2rem;
 }
 
-.menu button:hover {
+.cards-menu button:hover {
   box-shadow: 1px 1px 3px rgb(0, 255, 136);
 }
 
@@ -278,7 +266,6 @@ footer {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  height: auto;
   z-index: 1;
 }
 
@@ -287,7 +274,7 @@ footer {
   flex-direction: column;
   width: 55%;
   align-items: center;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 .leftSide {
@@ -295,7 +282,7 @@ footer {
   flex-direction: column;
   width: 45%;
   height: 100%;
-  /* border: 2px solid rgb(0, 255, 0); */
+  border: 2px solid rgb(0, 255, 0);
 }
 
 .cardContainer {
@@ -305,14 +292,13 @@ footer {
   padding: 2rem 0;
   justify-content: center;
   gap: 1.2rem;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
 
 .hangingRick {
   width: 120px;
   height: 120px;
   top: 0;
-  border: 1px solid red;
 }
 
 .scrollUpBtn {
@@ -356,9 +342,9 @@ footer {
   background-color: #00cf79;
 }
 
-#titulo {
-  width: fit-content;
-  /* border: 3px solid white; */
+#title {
+  margin: 3rem 0 0 3rem;
+  width: 80%;
 }
 
 .streak {
@@ -397,12 +383,12 @@ footer {
     top: 25%;
   }
 
-  h1 {
+  cards-page-h1 {
     font-size: 4.5rem;
     align-self: center;
     margin-left: 5%;
   }
-  .menu {
+  .cards-menu {
     margin-top: 15%;
   }
   footer {
@@ -420,7 +406,7 @@ footer {
     padding-bottom: 0;
     justify-content: space-between;
   }
-  #titulo {
+  #title {
     margin: 0;
   }
   .go-home-container {
@@ -429,7 +415,7 @@ footer {
   .search {
     width: 70%;
   }
-  h1 {
+  cards-page-h1 {
     margin: 2rem 0;
     position: static;
     font-size: 3.5rem;
@@ -466,19 +452,18 @@ footer {
     border-radius: 1rem;
   }
 
-  .menu {
+  .cards-menu {
     width: 70%;
     align-self: center;
     padding: 1rem;
     background: linear-gradient(rgba(128, 76, 158, 0.7), rgba(4, 92, 114, 0.7));
-    position: static;
+    position: fixed;
     border-radius: 1rem;
-    position: unset;
     margin: 0;
     box-shadow: 1px 1px 5px rgb(138, 75, 255);
   }
 
-  .menu button {
+  .cards-menu button {
     width: 70%;
   }
 
@@ -503,7 +488,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  h1 {
+  cards-page-h1 {
     text-align: center;
     font-size: 3.5rem;
   }
@@ -523,7 +508,7 @@ footer {
     width: 100%;
   }
 
-  .menu {
+  .cards-menu {
     width: 80%;
     align-self: center;
     padding: 1rem;
@@ -534,7 +519,7 @@ footer {
     box-shadow: 1px 1px 5px rgb(138, 75, 255);
   }
 
-  .menu button {
+  .cards-menu button {
     width: 70%;
   }
 

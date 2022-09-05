@@ -17,16 +17,21 @@ const CardsMenu = ({ getCharacters, amount, setAmount }) => {
       );
     });
   };
+
   console.log("amount", amount);
   return (
     <div>
-      <div id="titulo">
+      <div id="title">
         <h1 className="cards-page-h1">
           Rick <span>and</span> Morty
         </h1>
       </div>
-      <div className="menu">
-        <img className="hangingRick" src="../" alt="" />
+      <div className="cards-menu">
+        <img
+          className="hangingRick"
+          src={require("../../assets/images/rick-hanging.png")}
+          alt=""
+        />
         <label htmlFor="cards-amount">
           Number of characters
           <br />

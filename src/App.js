@@ -5,7 +5,6 @@ import RickAndMorty from "./pages/RickAndMorty";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-// import axios from "axios";
 
 const App = () => {
   return (

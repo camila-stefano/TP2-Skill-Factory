@@ -9,7 +9,7 @@ const Home = () => {
         <h2 className='home-h2'>TP 1</h2>
       </header>
       <section className="btn-container">
-        <Link to="/form">
+        <Link to="/contact">
           <button className="main-btn">FORM</button>
         </Link>
         <Link to="/users">
