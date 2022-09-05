@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
   --aquamarine: rgba(113, 255, 208, 1);
   --medium-spring-green: rgba(12, 255, 154, 1);
   --blue-sapphire: rgba(4, 92, 114, 1);
   --dark-purple: rgba(62, 43, 66, 1);
   --royal-purple: rgba(128, 76, 158, 1);
   --medium-purple: rgba(164, 115, 255, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
 }
 
 .App {
@@ -170,4 +177,17 @@ footer {
   header h2 {
     font-size: 2rem;
   }
+}
+
+/* Overrides - Reemplazo de estilos para componentes nativos */
+
+input,
+textarea {
+  background-color: rgba(34, 26, 43, 0.5);
+  color: var(--aquamarine);
+  font-size: 1rem;
+  padding: 0.45rem;
+  border: none;
+  border-bottom: 2px solid rgb(164, 115, 255);
+  border-radius: 0.5rem;
 }
