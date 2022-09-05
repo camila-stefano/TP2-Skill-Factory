@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import RickAndMorty from "./components/RickAndMorty";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 // import axios from "axios";
 
 const App = () => {
@@ -17,9 +18,7 @@ const App = () => {
         <Route path="/users" element={<Users />} />
         <Route path="/rick-and-morty" element={<RickAndMorty />} />
       </Routes>
-      <footer>
-        <p class="footer-text">Made by Alan Vilalte & Cami Stéfano</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

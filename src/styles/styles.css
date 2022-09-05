@@ -136,23 +136,6 @@ a {
   background: linear-gradient(rgba(12, 255, 182, 0.1), rgba(0, 0, 0, 0));
 }
 
-footer {
-  display: flex;
-  text-shadow: 1px 1px 1px var(--dark-purple);
-  justify-content: center;
-  padding: 1rem;
-  align-items: flex-end;
-  color: rgb(212, 255, 235);
-  opacity: 0.6;
-  width: 100vw;
-  height: 15rem;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  z-index: 5;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.12));
-}
-
 @media (max-width: 750px) {
   body {
     grid-template-rows: 5rem 1fr 3rem;
