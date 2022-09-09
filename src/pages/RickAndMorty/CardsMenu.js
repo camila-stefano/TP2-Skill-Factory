@@ -1,31 +1,37 @@
 import "./styles.css";
-import Card from "./Card";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-const CardsMenu = ({ getCharacters, amount, setAmount }) => {
-  const displayCards = async (amount) => {
-    const characters = await getCharacters(amount);
-    console.log("displayCards executing");
-    characters.map((character) => {
-      return (
-        <Card
-          id={character.id}
-          image={character.image}
-          name={character.name}
-          species={character.species}
-          status={character.status}
-        />
+const CardsMenu = ({
+  characters,
+  setCharacters,
+  amount,
+  setAmount,
+  getCharacters,
+  setId,
+  setClear,
+}) => {
+  const [charName, setcharName] = useState("");
+  const [searchField, setSearchField] = useState("");
+
+  const searchResults = async (charName) => {
+    console.log("charname from searchresults", charName);
+    try {
+      const response = await axios.get(
+        `https://rickandmortyapi.com/api/character/?name=${charName}`
       );
-    });
+      console.log("this is response.data", response.data);
+      console.log("this is response.data.results", response.data.results);
+      setSearchField("");
+      setCharacters(response.data.results);
+    } catch (err) {
+      console.log("There was an error.", err);
+    }
   };
 
-  console.log("amount", amount);
   return (
     <div>
-      <div id="title">
-        <h1 className="cards-page-h1">
-          Rick <span>and</span> Morty
-        </h1>
-      </div>
       <div className="cards-menu">
         <img
           className="hangingRick"
@@ -40,22 +46,62 @@ const CardsMenu = ({ getCharacters, amount, setAmount }) => {
         <select
           name="cards-amount"
           id="cards-amount"
+          onLoad={(e) => setAmount(e.target.value)}
           onChange={(e) => setAmount(e.target.value)}
         >
           <option value="20">20</option>
           <option value="50">50</option>
           <option value="100">100</option>
           <option value="200">200</option>
+          <option value="500">500</option>
         </select>
-        <button id="showBtn" onClick={() => displayCards(amount)}>
-          Show characters
-        </button>
+        <Link to="/rick-and-morty">
+          <button
+            id="showBtn"
+            onClick={() => {
+              getCharacters(amount);
+              setId(0);
+            }}
+          >
+            Show characters
+          </button>
+        </Link>
         <div className="search">
           <label htmlFor="search-field">Search character</label>
-          <input type="text" id="search-field" />
+          <input
+            autoComplete="off"
+            type="text"
+            id="search-field"
+            value={searchField}
+            onChange={(e) => {
+              setcharName(e.target.value);
+              setSearchField(e.target.value);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                searchResults(charName);
+                setId(0);
+              }
+            }}
+          />
         </div>
-        <button id="search-btn">Search</button>
-        <button id="clearBtn">Clear page</button>
+        <button
+          id="search-btn"
+          onClick={(e) => {
+            searchResults(charName);
+            setId(0);
+          }}
+        >
+          Search
+        </button>
+        <button
+          id="clearBtn"
+          onClick={() => {
+            setClear(true);
+          }}
+        >
+          Clear page
+        </button>
       </div>
     </div>
   );

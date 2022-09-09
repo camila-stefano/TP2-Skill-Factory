@@ -1,8 +1,25 @@
 import "./styles.css";
+import { Link } from "react-router-dom";
 
-const Card = ({ image, name, id: charId, species, status }) => {
+const Card = ({
+  image,
+  name,
+  id: charId,
+  species,
+  status,
+  setId,
+  id,
+  setIsCardSelected,
+}) => {
   return (
-    <div className="card">
+    <Link
+      to={`character/${id}`}
+      className="card"
+      onClick={() => {
+        setIsCardSelected(true);
+        setId(charId);
+      }}
+    >
       <img src={image} alt=""></img>
       <h4>
         <b>{name}</b>
@@ -22,7 +39,7 @@ const Card = ({ image, name, id: charId, species, status }) => {
         <b>Status: </b>
         {status}
       </p>
-    </div>
+    </Link>
   );
 };
 

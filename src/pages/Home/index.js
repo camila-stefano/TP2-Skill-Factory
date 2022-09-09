@@ -1,12 +1,17 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-const Home = () => {
+const Home = ({ title }) => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   return (
     <div>
-      <header>
+      <header className="home__header">
         <h1 className="home-h1">Skill Factory by AVALITH</h1>
-        <h2 className='home-h2'>TP 1</h2>
+        <h2 className="home-h2">TP 2</h2>
       </header>
       <section className="btn-container">
         <Link to="/contact">

@@ -1,0 +1,10 @@
+.home-h1 {
+  font-family: "Changa", sans-serif;
+  color: var(--aquamarine);
+}
+.home-h2 {
+  color: var(--aquamarine);
+}
+.home__header {
+  margin-top: 3rem;
+}
