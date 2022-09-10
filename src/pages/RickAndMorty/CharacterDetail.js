@@ -5,7 +5,6 @@ import { useParams, Link } from "react-router-dom";
 const CharacterDetail = () => {
   const [selectedCharacter, setSelectedCharacter] = useState({});
   const { id } = useParams();
-
   const fetchCharacter = async (id) => {
     const response = await axios.get(
       `https://rickandmortyapi.com/api/character/${id}`
@@ -38,8 +37,7 @@ const CharacterDetail = () => {
         <p>Species: {selectedCharacter.species}</p>
         <p>Planet of origin:{selectedCharacter.origin?.name}</p>
         <p>Current Location: {selectedCharacter.location?.name}</p>
-        <Link to={"/rick-and-morty"}>
-          {" "}
+        <Link to="/rick-and-morty">
           <p className="card-detail__go-back-btn">Go back</p>
         </Link>
       </div>

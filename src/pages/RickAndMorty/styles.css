@@ -209,6 +209,7 @@ html {
   border: 2px solid var(--aquamarine);
 }
 .card-detail__name {
+  margin-top: 1rem;
   text-align: center;
 }
 .card-detail__go-back-btn {

@@ -35,6 +35,12 @@ const RickAndMorty = ({ title }) => {
     document.title = title;
   }, [title]);
 
+  useEffect(() => {
+    setId(0);
+  }, [characters]);
+
+  console.log("current id: ", id);
+  
   return !id && !clear ? (
     <div className="RickAndMorty">
       <img
@@ -107,7 +113,7 @@ const RickAndMorty = ({ title }) => {
             />
           </div>
           <div className="rightSide__card-detail">
-            <Outlet color={"rojo"} />
+            <Outlet />
           </div>
         </div>
       </div>
