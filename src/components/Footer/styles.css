@@ -30,6 +30,7 @@ footer {
   padding-right: 5rem;
   width: 50%;
   align-items: flex-end;
+
 }
 .footer__content__rickAndMorty a {
   color: var(--aquamarine);

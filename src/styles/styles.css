@@ -55,7 +55,7 @@
 }
 .navBar__RickAndMorty {
   background: url(../assets/images/trippy.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   /* border-bottom: 1px solid var(--aquamarine); */
   /* box-shadow: 0 0 150px 5px rgba(12, 255, 174, 0.3); */
   position: fixed;

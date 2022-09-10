@@ -66,7 +66,7 @@ body {
   border-radius: 1rem;
 }
 
-footer {
+/* footer {
   display: flex;
   text-shadow: 1px 1px 1px var(--dark-purple);
   justify-content: center;
@@ -78,9 +78,8 @@ footer {
   height: 6rem;
   bottom: 0;
   position: fixed;
-  z-index: 5;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.2));
-}
+} */
 
 .upper-gradient {
   color: rgb(212, 255, 235);

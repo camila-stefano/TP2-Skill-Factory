@@ -1,16 +1,16 @@
-import "./styles.css";
-import CardsMenu from "./CardsMenu";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import Card from "./Card";
 import { Outlet } from "react-router-dom";
 import NavBar from "../../components/NavBar";
+import CardsMenu from "./CardsMenu";
+import Card from "./Card";
+import axios from "axios";
+import "./styles.css";
 // import Pagination from "./Pagination";
 
 const RickAndMorty = ({ title }) => {
+  // const [info, setInfo] = useState({}); // Para la paginacion en la busqueda por nombre. -pending
   const [characters, setCharacters] = useState([]);
   const [amount, setAmount] = useState(20);
-  // const [info, setInfo] = useState({}); // Para la paginacion en la busqueda por nombre.
   const [isCardSelected, setIsCardSelected] = useState(false);
   const [id, setId] = useState(0);
   const [clear, setClear] = useState(false);
@@ -31,42 +31,9 @@ const RickAndMorty = ({ title }) => {
     }
   };
 
-  const GoUpButton = () => {
-    if (
-      document.body.scrollTop > 500 ||
-      document.documentElement.scrollTop > 500
-    ) {
-      return (
-        <>
-          <button className="scrollUpBtn">Go up</button>
-        </>
-      );
-    }
-  };
-
-  // Para la paginacion
-  // const onPrev = () => {
-  //   getCharacters();
-  // };
-  // const onNext = () => {
-  //   getCharacters();
-  // };
-
   useEffect(() => {
     document.title = title;
   }, [title]);
-
-  useEffect(() => {
-    console.log("characters: ", characters);
-  }, [characters]);
-
-  useEffect(() => {
-    console.log("id", id);
-  }, [id]);
-
-  useEffect(() => {
-    setClear(false);
-  }, [clear]);
 
   return !id && !clear ? (
     <div className="RickAndMorty">
@@ -110,7 +77,6 @@ const RickAndMorty = ({ title }) => {
               );
             })}
           </div>
-          <GoUpButton />
         </div>
       </div>
     </div>
@@ -141,7 +107,7 @@ const RickAndMorty = ({ title }) => {
             />
           </div>
           <div className="rightSide__card-detail">
-            <Outlet />
+            <Outlet color={"rojo"} />
           </div>
         </div>
       </div>

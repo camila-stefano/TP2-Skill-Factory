@@ -15,8 +15,22 @@ const Footer = () => {
         }
       >
         <p className="footer-text">
-          Made by <a href="http://www.github.com/avilalte">Alan Vilalte</a> &{" "}
-          <a href="https://github.com/CamiStefano">Cami Stéfano</a>
+          Made by{" "}
+          <a
+            href="http://www.github.com/avilalte"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Alan Vilalte
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://github.com/CamiStefano"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Cami Stéfano
+          </a>
         </p>
       </div>
     </footer>

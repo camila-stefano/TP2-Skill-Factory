@@ -1,4 +1,4 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Users from "./pages/Users";
 import Contact from "./pages/Contact";
 import RickAndMorty from "./pages/RickAndMorty";

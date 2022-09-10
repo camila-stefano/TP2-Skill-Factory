@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const CharacterDetail = () => {
   const [selectedCharacter, setSelectedCharacter] = useState({});
@@ -18,7 +18,9 @@ const CharacterDetail = () => {
     fetchCharacter(id);
   }, [id]);
 
-  return (
+  console.log("current id: ", id);
+  console.log("current character: ", selectedCharacter.name);
+  return id ? (
     <div className="card-detail">
       <div className="card-detail__left-side">
         <div className="card-detail__img-container">
@@ -34,11 +36,15 @@ const CharacterDetail = () => {
         <p>ID: {selectedCharacter.id}</p>
         <p>Status: {selectedCharacter.status}</p>
         <p>Species: {selectedCharacter.species}</p>
-        {/* <p>Planet of origin:{selectedCharacter.origin.name}</p> */}
-        {/* <p>Current Location: {selectedCharacter.location.name}</p> */}
+        <p>Planet of origin:{selectedCharacter.origin?.name}</p>
+        <p>Current Location: {selectedCharacter.location?.name}</p>
+        <Link to={"/rick-and-morty"}>
+          {" "}
+          <p className="card-detail__go-back-btn">Go back</p>
+        </Link>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default CharacterDetail;

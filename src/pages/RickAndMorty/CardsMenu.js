@@ -61,6 +61,7 @@ const CardsMenu = ({
             onClick={() => {
               getCharacters(amount);
               setId(0);
+              setClear(false);
             }}
           >
             Show characters
@@ -80,6 +81,7 @@ const CardsMenu = ({
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 searchResults(charName);
+                setClear(false);
                 setId(0);
               }
             }}
@@ -94,14 +96,16 @@ const CardsMenu = ({
         >
           Search
         </button>
-        <button
-          id="clearBtn"
-          onClick={() => {
-            setClear(true);
-          }}
-        >
-          Clear page
-        </button>
+        <Link to="/rick-and-morty">
+          <button
+            id="clearBtn"
+            onClick={() => {
+              setClear(true);
+            }}
+          >
+            Clear page
+          </button>
+        </Link>
       </div>
     </div>
   );
