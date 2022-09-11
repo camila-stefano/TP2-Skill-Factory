@@ -55,53 +55,11 @@ html {
   z-index: -4;
   position: fixed;
 }
-.filter-color {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(68, 75, 175, 0.25);
-  top: 0;
-  mix-blend-mode: multiply;
-  z-index: -3;
-  position: fixed;
-}
+
 .divider {
   width: 5%;
   height: 1px;
   background-color: rgb(183, 255, 215);
-}
-
-.go-home-res {
-  top: 1rem;
-  left: 1rem;
-  position: fixed;
-  width: fit-content;
-  display: none;
-  color: var(--aquamarine);
-  text-decoration: none;
-  font-size: 0.75rem;
-}
-
-.go-home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  /* border: 1px solid red; */
-}
-
-.go-home-container .divider {
-  width: 41vw;
-  box-shadow: 1px 1px 15px rgb(113, 255, 208);
-}
-
-.go-home {
-  text-decoration: none;
-  color: rgb(147, 255, 205);
-  text-align: center;
-  font-size: 1.5rem;
-  align-self: flex-end;
-  margin-right: 0.5rem;
 }
 
 .card {
@@ -122,7 +80,6 @@ html {
   animation: pulse 3s infinite;
   border: 1px solid rgb(12, 255, 154);
 }
-
 .card:hover {
   top: 0;
   background-color: rgb(128, 76, 158);
@@ -131,21 +88,18 @@ html {
   border: 2px solid rgb(113, 255, 208);
   transform: translateX(-7%) translateY(-7%) scale(1.1);
   transition: 0.5s;
-  z-index: 51;
+  z-index: 5;
   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-
 .card img {
   width: 100%;
   border-radius: 0.5em;
   border-bottom: 2px solid rgb(0, 255, 136);
 }
-
 .card p {
   text-shadow: 1px 2px 2px rgb(64, 39, 71);
   cursor: text;
 }
-
 .card h4 {
   text-shadow: 1px 2px 2px rgb(64, 39, 71);
   cursor: text;
@@ -161,10 +115,10 @@ html {
   animation: text-pulse 2s infinite;
   user-select: none;
 }
-
 .cards-page-h1 span {
   font-size: 0.6em;
 }
+
 .card-detail {
   display: flex;
   align-self: center;
@@ -178,11 +132,11 @@ html {
   font-size: 1.5rem;
   border: 1px solid var(--aquamarine);
   background: linear-gradient(rgba(44, 83, 88, 0.5), rgba(164, 115, 255, 0.5));
-  transition: .5s;
+  transition: 0.5s;
 }
-.card-detail:hover{
+.card-detail:hover {
   box-shadow: 0 0 100px 1000px rgba(0, 0, 0, 0.5);
-  transition: .5s;
+  transition: 0.5s;
 }
 .card-detail__left-side {
   display: flex;
@@ -191,7 +145,7 @@ html {
   gap: 0.5rem;
 }
 .card-detail__right-side {
-  letter-spacing: .1ch;
+  letter-spacing: 0.1ch;
   height: 100%;
   padding: 0.5rem;
   /* border: 1px solid white; */
@@ -213,7 +167,7 @@ html {
   text-align: center;
 }
 .card-detail__go-back-btn {
-  padding: 0.5rem .7rem;
+  padding: 0.5rem 0.7rem;
   color: var(--aquamarine);
   margin-top: 3rem;
   margin-left: 13rem;
@@ -293,50 +247,12 @@ html {
   cursor: pointer;
 }
 
-.vertical-divider {
-  background-color: rgb(183, 255, 215);
-  position: fixed;
-  left: 47%;
-  top: 10%;
-  width: 0.1rem;
-  height: 80vh;
-  box-shadow: 1px 1px 15px rgb(113, 255, 208);
-}
-
-.upper-gradient {
-  color: rgb(212, 255, 235);
-  opacity: 0.7;
-  width: 100vw;
-  height: 7rem;
-  top: 0;
-  position: fixed;
-  z-index: 1;
-  background: linear-gradient(rgba(12, 255, 182, 0.1), rgba(0, 0, 0, 0));
-}
-
-/* footer {
-  display: flex;
-  padding: 0 26% 0 20%;
-  text-shadow: 1px 1px 1px var(--dark-purple);
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: rgb(212, 255, 235);
-  width: 100vw;
-  height: 10rem;
-  bottom: 0;
-  position: fixed;
-  z-index: 5;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.15));
-} */
-
 .cards-menu button:nth-of-type(3) {
   background-color: rgba(76, 54, 179, 0.418);
 }
-
 .cards-menu label {
   font-size: 1.2rem;
 }
-
 .cards-menu button:hover {
   box-shadow: 1px 1px 3px rgb(0, 255, 136);
 }
@@ -347,9 +263,9 @@ html {
   min-height: 100vh;
   z-index: 1;
 }
-
 .rightSide {
   display: flex;
+  padding: 2rem 0;
   margin-top: 5rem;
   flex-direction: column;
   width: 55%;
@@ -389,7 +305,7 @@ html {
   top: 0;
 }
 
-.scrollUpBtn {
+/* .scrollUpBtn {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -401,7 +317,7 @@ html {
   cursor: pointer;
   background-color: #2bffae;
   box-shadow: 1px 1px 10px rgb(12, 255, 154);
-}
+} */
 
 .goHome {
   font-family: "Get Schwifty";
@@ -435,17 +351,6 @@ html {
   position: fixed;
 }
 
-.streak {
-  top: 14.5rem;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  position: fixed;
-  z-index: -2;
-  background-color: rgba(44, 32, 54, 0.274);
-  /* transform: rotateZ(160deg); */
-}
-
 .search {
   display: flex;
   flex-direction: column;
@@ -477,7 +382,7 @@ html {
 /* Responsive design.  */
 
 @media (max-width: 1500px) {
-  cards-page-h1 {
+  .cards-page-h1 {
     font-size: 3rem;
     align-self: center;
     margin-left: 5%;
@@ -509,7 +414,7 @@ html {
   .search {
     width: 70%;
   }
-  cards-page-h1 {
+  .cards-page-h1 {
     margin: 2rem 0;
     position: static;
     font-size: 3.5rem;
@@ -526,24 +431,7 @@ html {
     gap: 1.5rem;
   }
 
-  .go-home-res {
-    top: 0.5rem;
-    left: 0.5rem;
-    padding: 0.3rem 1rem 0.5rem 1rem;
-    position: fixed;
-    width: fit-content;
-    color: var(--aquamarine);
-    text-decoration: none;
-    font-size: 1rem;
-    cursor: pointer;
-    z-index: 4;
-    text-shadow: 2px 2px 5px var(--dark-purple);
-    height: 2.5rem;
-    background: rgba(83, 146, 136, 0.1);
-    border-radius: 1rem;
-  }
-
-  .cards-menu {
+  .cards-mnu {
     width: 70%;
     align-self: center;
     padding: 1rem;
@@ -553,24 +441,14 @@ html {
     margin: 0;
     box-shadow: 1px 1px 5px rgb(138, 75, 255);
   }
-
   .cards-menu button {
     width: 70%;
   }
-
   .card {
     width: 70%;
   }
   .card:hover {
     transform: translateX(-1%) translateY(-2%) scale(1.2);
-  }
-  .go-home-res {
-    display: inline-block;
-  }
-
-  .filter-color {
-    background-color: rgba(38, 41, 80, 0.3);
-    mix-blend-mode: multiply;
   }
 }
 
@@ -579,7 +457,7 @@ html {
     flex-direction: column;
     align-items: center;
   }
-  cards-page-h1 {
+  .cards-page-h1 {
     text-align: center;
     font-size: 3.5rem;
   }
@@ -614,8 +492,4 @@ html {
     width: 70%;
   }
 
-  .filter-color {
-    background-color: rgba(38, 41, 80, 0.5);
-    mix-blend-mode: multiply;
-  }
 }

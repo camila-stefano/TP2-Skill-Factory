@@ -20,7 +20,17 @@
   position: relative;
   /* overflow-x: hidden; */
 }
-
+.color-filter{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(var(--dark-purple), var(--royal-purple));
+  mix-blend-mode: overlay;
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
 .navBar {
   width: 100%;
   color: var(--aquamarine);
@@ -29,7 +39,7 @@
   background: linear-gradient(
     rgba(125, 125, 121, 0),
     rgba(147, 177, 174, 0.1),
-    rgba(148, 171, 189, 0.548)
+    rgba(152, 148, 189, 0.548)
   );
   top: 0;
   padding: 0 20%;

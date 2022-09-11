@@ -3,13 +3,13 @@ import "./styles.css";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
-  const footerException = "/rick-and-morty";
+  const footerRickAndMorty = "/rick-and-morty";
   const { pathname: location } = useLocation();
   return (
     <footer>
       <div
         className={
-          location === footerException
+          location === footerRickAndMorty
             ? "footer__content__rickAndMorty"
             : "footer__content"
         }
