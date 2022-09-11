@@ -10,7 +10,7 @@ const NavBar = () => {
         location === navBarException ? "navBar navBar__RickAndMorty" : "navBar"
       }
     >
-      <Link to="./" className="navBar__link">
+      <Link to="/" className="navBar__link">
         Home
       </Link>
       <Link to="./contact" className="navBar__link">
