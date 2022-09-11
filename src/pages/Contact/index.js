@@ -1,16 +1,33 @@
 import "./styles.css";
 import { useForm } from "react-hook-form";
+import Popup from "../../components/Popup";
+import { useState } from "react";
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const [name, setName] = useState("");
+
+  const onSubmit = (data) => {
+    const { uname, email, message } = data;
+    console.log({ uname });
+    console.log({ email });
+    console.log({ message });
+    setName(uname);
+  };
+
+  const handleClose = () => {
+    setName("");
+    reset();
+  };
+
   return (
     <section className="contact">
+      {name && <Popup title={`Thank you ${name} for you message!`} body="We will contact you as soon as possible." onClose={handleClose} />}
       <h1 className="contact__title">You can use the following form to reach out to us</h1>
 
       <form className="contact__form" onSubmit={handleSubmit(onSubmit)}>

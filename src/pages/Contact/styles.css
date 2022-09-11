@@ -65,6 +65,17 @@
   outline: none;
 }
 
+.error {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: rgb(115, 255, 201);
+  padding: 0.1rem 1.5rem 0.1rem 1rem;
+  background-color: rgba(87, 172, 144, 0.1);
+  border-radius: 1rem;
+  width: fit-content;
+  border: 1px solid rgb(164, 115, 255);
+}
+
 .btn-form {
   background: none;
   display: flex;
