@@ -1,10 +1,10 @@
-## **💻 Skill Factory - Second Project.** - **React JS.**
+## **💻 Skill Factory - Checkpoint 2.** - **React JS.**
 
 ---
 
-The assignment for this project (**TP2**) was to migrate [our first project](https://github.com/avilalte/TP1-Skill-Factory) (**TP1**) to a React SPA.
+The assignment for this project (**C2**) was to migrate [our first project](https://github.com/avilalte/TP1-Skill-Factory) (**C1**) to a React SPA.
 
-This is a brief description of **TP1**:
+This is a brief description of **C1**:
 
 > _The goal was to create a site with 3 pages which would contain in no specific order: a contact form, a users table, and a set of cards displaying information about Rick and Morty characters._
 >
@@ -12,7 +12,7 @@ This is a brief description of **TP1**:
 
 ---
 
-The following dependencies were used for **TP2**:
+The following dependencies were used for **C2**:
 
 - Axios.
 - React.
