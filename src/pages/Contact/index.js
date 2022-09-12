@@ -33,9 +33,17 @@ const Contact = () => {
       <form className="contact__form" onSubmit={handleSubmit(onSubmit)}>
         <div className="contact__form__input">
           <label htmlFor="uname">Name:</label>
-          <input type="text" id="uname" name="uname" autoFocus {...register("uname", { required: true, maxLength: 20 })} />
+          <input
+            type="text"
+            id="uname"
+            name="uname"
+            autoFocus
+            {...register("uname", { required: true, maxLength: 40, pattern: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/ })}
+          />
 
-          {errors.uname && <p className="error">This field is required</p>}
+          {errors.uname?.type === "required" && <p className="error">This field is required</p>}
+          {errors.uname?.type === "pattern" && <p className="error">Hmm… that name doesn't look valid</p>}
+          {errors.uname?.type === "maxLength" && <p className="error">Hmm… that name have a lot characters. Try less</p>}
         </div>
 
         <div className="contact__form__input">
@@ -47,7 +55,7 @@ const Contact = () => {
           />
 
           {errors.email?.type === "required" && <p className="error">This field is required</p>}
-          {errors.email?.type === "pattern" && <p className="error">Email address invalid</p>}
+          {errors.email?.type === "pattern" && <p className="error">Hmm… that email doesn't look valid</p>}
         </div>
         <div className="contact__form__textarea">
           <textarea
