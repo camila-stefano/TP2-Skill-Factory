@@ -1,0 +1,74 @@
+.navBar {
+  width: 100%;
+  color: var(--aquamarine);
+  align-items: center;
+  font-size: 1.2rem;
+  background: linear-gradient(rgba(125, 125, 121, 0), rgba(147, 177, 174, 0.1), rgba(152, 148, 189, 0.548));
+  top: 0;
+  padding: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navBar__link {
+  color: var(--aquamarine);
+  padding: 0.5rem 0;
+  line-height: 1.5ch;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  transition: 0.5s;
+}
+
+.navBar__link:hover {
+  border-bottom: 1px solid var(--aquamarine);
+  border-top: 1px solid var(--aquamarine);
+  text-shadow: 1px 1px 5px var(--aquamarine);
+  padding: 1rem 0;
+  transition: 0.5s;
+}
+
+.navBar__RickAndMorty {
+  background: url(../../assets/images/trippy.jpg);
+  /* background-size: cover; */
+  /* border-bottom: 1px solid var(--aquamarine); */
+  /* box-shadow: 0 0 150px 5px rgba(12, 255, 174, 0.3); */
+  position: fixed;
+  z-index: 2;
+}
+
+.hide__btn {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 0.5rem;
+  right: 1.5rem;
+  font-size: 0.7rem;
+  background: transparent;
+  color: rgb(12, 255, 154);
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 720px) {
+  .navBar {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    height: 200px;
+    padding: 1rem 0rem;
+  }
+
+  .navBar__hidden {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hide__btn {
+    display: flex;
+  }
+}
