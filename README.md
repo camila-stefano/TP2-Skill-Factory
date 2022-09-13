@@ -15,8 +15,8 @@ This is a brief description of **C1**:
 ### Features
 
 - **Form page** where you can enter your info and send a message. _Handled with `React Hook Form`_.
-- **Users page** that displays a table with fake users data from [this API](https://jsonplaceholder.typicode.com/users). _Fetched with `Axios`_.
-- **Rick and Morty page** where you can see all the characters from R&M with details like `species`, `birth planet`, `status` (_dead or alive_), and a picture of them. You can also search by name, which will show you all the variants each character has had throughout the show.
+- **Users page** that displays a table with fake users data from [this API](https://jsonplaceholder.typicode.com/users). _Fetched using `Axios`_.
+- **Rick and Morty page** where you can see all the characters from R&M with details like `species`, `birth planet`, `status` (_dead or alive_), and a picture of them. You can also search by name, which will show you all the variants each character has had throughout the show. *Data fetched from [this API](https://rickandmortyapi.com/) using Axios*
 
 #### The following dependencies were used for **C2**:
 
