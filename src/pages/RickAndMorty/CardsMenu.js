@@ -4,24 +4,24 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const CardsMenu = ({
+  setPagination,
   setCharacters,
   amount,
   setAmount,
   getCharacters,
   setId,
   setClear,
+  setPrev,
+  setNext
 }) => {
   const [charName, setcharName] = useState("");
   const [searchField, setSearchField] = useState("");
 
   const searchResults = async (charName) => {
-    console.log("charname from searchresults", charName);
     try {
       const response = await axios.get(
         `https://rickandmortyapi.com/api/character/?name=${charName}`
       );
-      console.log("this is response.data", response.data);
-      console.log("this is response.data.results", response.data.results);
       setSearchField("");
       setCharacters(response.data.results);
     } catch (err) {

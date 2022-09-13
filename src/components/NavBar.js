@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 const NavBar = () => {
   const { pathname: location } = useLocation();
   const navBarException = `/rick-and-morty`;
-  console.log("this is location", location);
   return (
     <nav
       className={
