@@ -2,7 +2,6 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%) scale(1.2);
   font-size: 0.8rem;
   padding: 2rem;
@@ -16,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: .8rem;
   height: 1.5rem;
   width: 1.5rem;
   top: 0.5rem;

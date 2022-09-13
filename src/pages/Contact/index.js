@@ -14,9 +14,9 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     const { uname, email, message } = data;
-    console.log({ uname });
-    console.log({ email });
-    console.log({ message });
+    console.log("Name:", uname);
+    console.log("Email:", email);
+    console.log("Message:", message);
     setName(uname);
   };
 
@@ -25,10 +25,27 @@ const Contact = () => {
     reset();
   };
 
+  const formatName = (name) => {
+    return name
+      .split(" ")
+      .map((word) => {
+        return word[0].toUpperCase().concat(word.substring(1));
+      })
+      .join(" ");
+  };
+
   return (
     <section className="contact">
-      {name && <Popup title={`Thank you ${name} for you message!`} body="We will contact you as soon as possible." onClose={handleClose} />}
-      <h1 className="contact__title">You can use the following form to reach out to us</h1>
+      {name && (
+        <Popup
+          title={`Thank you for your message, ${formatName(name)}!`}
+          body="We will contact you as soon as possible."
+          onClose={handleClose}
+        />
+      )}
+      <h1 className="contact__title">
+        You can use the following form to reach out to us
+      </h1>
 
       <form className="contact__form" onSubmit={handleSubmit(onSubmit)}>
         <div className="contact__form__input">
@@ -37,25 +54,47 @@ const Contact = () => {
             type="text"
             id="uname"
             name="uname"
+            autoComplete="off"
             autoFocus
-            {...register("uname", { required: true, maxLength: 40, pattern: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/ })}
+            {...register("uname", {
+              required: true,
+              maxLength: 40,
+              pattern: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/,
+            })}
           />
 
-          {errors.uname?.type === "required" && <p className="error">This field is required</p>}
-          {errors.uname?.type === "pattern" && <p className="error">Hmm… that name doesn't look valid</p>}
-          {errors.uname?.type === "maxLength" && <p className="error">Hmm… that name have a lot characters. Try less</p>}
+          {errors.uname?.type === "required" && (
+            <p className="error">This field is required</p>
+          )}
+          {errors.uname?.type === "pattern" && (
+            <p className="error">Hmm… that name doesn't look valid</p>
+          )}
+          {errors.uname?.type === "maxLength" && (
+            <p className="error">
+              Hmm… that name has a lot characters. Try less
+            </p>
+          )}
         </div>
 
         <div className="contact__form__input">
           <label htmlFor="email">Email:</label>
           <input
             id="email"
+            autoComplete="off"
             size="30"
-            {...register("email", { required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })}
+            {...register("email", {
+              required: true,
+              pattern:
+                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            })}
           />
 
-          {errors.email?.type === "required" && <p className="error">This field is required</p>}
-          {errors.email?.type === "pattern" && <p className="error">Hmm… that email doesn't look valid</p>}
+          {errors.email?.type === "required" && (
+            <p className="error">This field is required</p>
+          )}
+          {errors.email?.type === "pattern" && (
+            <p className="error">Hmm… that email doesn't look valid</p>
+          )}
         </div>
         <div className="contact__form__textarea">
           <textarea
@@ -66,8 +105,12 @@ const Contact = () => {
             {...register("message", { required: true, minLength: 20 })}
           />
 
-          {errors.message?.type === "required" && <p className="error">This field is required</p>}
-          {errors.message?.type === "minLength" && <p className="error">Minimum 20 characters required</p>}
+          {errors.message?.type === "required" && (
+            <p className="error">This field is required</p>
+          )}
+          {errors.message?.type === "minLength" && (
+            <p className="error">Minimum 20 characters required</p>
+          )}
         </div>
         <button className="preview-btn btn-form">Submit</button>
       </form>

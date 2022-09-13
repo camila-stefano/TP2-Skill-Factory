@@ -17,8 +17,6 @@ const CharacterDetail = () => {
     fetchCharacter(id);
   }, [id]);
 
-  console.log("current id: ", id);
-  console.log("current character: ", selectedCharacter.name);
   return id ? (
     <div className="card-detail">
       <div className="card-detail__left-side">

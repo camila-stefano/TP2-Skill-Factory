@@ -39,15 +39,8 @@ const RickAndMorty = ({ title }) => {
     setId(0);
   }, [characters]);
 
-  console.log("current id: ", id);
-  
   return !id && !clear ? (
     <div className="RickAndMorty">
-      <img
-        require={"../assets/images/rick-hanging-png.png"}
-        id="bg-img"
-        alt=""
-      />
       <div className="main-container">
         <div className="leftSide">
           <div id="title">
@@ -90,11 +83,6 @@ const RickAndMorty = ({ title }) => {
     <>
       <NavBar />
       <div className="RickAndMorty">
-        <img
-          require={"../assets/images/rick-hanging-png.png"}
-          id="bg-img"
-          alt=""
-        />
         <div className="main-container">
           <div className="leftSide">
             <div id="title">
