@@ -9,6 +9,12 @@
   gap: 2rem;
 }
 
+@media (max-width: 720px) {
+  .contact {
+    margin-top: 0;
+  }
+}
+
 .contact__title {
   display: flex;
   justify-content: center;
