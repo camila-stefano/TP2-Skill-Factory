@@ -37,4 +37,4 @@ npm install
 npm start
 ```
 
-#### You can try it live here! : https://tp2-skill-factory.netlify.app/
+#### You can try it live here! : https://tp2-skill-factory-2022.netlify.app/
