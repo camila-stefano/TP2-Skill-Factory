@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
+  
+} 
 *:focus {
   outline: none;
 }
@@ -13,12 +13,10 @@
 .App {
   width: 100vw;
   height: 100vh;
-  /* background: url(../assets/images/mountains-bg.jpg); */
   background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
   position: relative;
-  /* overflow-x: hidden; */
 }
 .color-filter {
   width: 100vw;
@@ -68,7 +66,6 @@ header h2 {
   height: auto;
   justify-content: center;
   gap: 5rem;
-  /* border: 2px solid black; */
 }
 
 .main-btn {

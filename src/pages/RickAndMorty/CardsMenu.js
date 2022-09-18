@@ -4,15 +4,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const CardsMenu = ({
-  setPagination,
   setCharacters,
   amount,
   setAmount,
   getCharacters,
   setId,
   setClear,
-  setPrev,
-  setNext
 }) => {
   const [charName, setcharName] = useState("");
   const [searchField, setSearchField] = useState("");

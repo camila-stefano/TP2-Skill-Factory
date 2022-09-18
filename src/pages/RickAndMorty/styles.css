@@ -147,7 +147,6 @@ html {
   letter-spacing: 0.1ch;
   height: 100%;
   padding: 0.5rem;
-  /* border: 1px solid white; */
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -231,7 +230,6 @@ html {
   align-items: center;
   align-self: flex-end;
   gap: 1.2rem;
-  /* border: 2px solid red; */
 }
 
 .cards-menu button {
@@ -269,12 +267,10 @@ html {
   flex-direction: column;
   width: 55%;
   align-items: center;
-  /* border: 2px solid red; */
 }
 .rightSide__card-detail {
   display: flex;
   width: 50%;
-  /* border: 1px solid white; */
   flex-direction: column;
   justify-content: center;
 }
@@ -285,7 +281,6 @@ html {
   flex-direction: column;
   width: 45%;
   height: 100%;
-  /* border: 2px solid rgb(0, 255, 0); */
 }
 
 .card-container {
@@ -295,7 +290,6 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
-  /* border: 1px solid white; */
 }
 
 .hangingRick {
@@ -303,20 +297,6 @@ html {
   height: 120px;
   top: 0;
 }
-
-/* .scrollUpBtn {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 1em;
-  right: 3em;
-  border-radius: 50%;
-  z-index: 99;
-  border: none;
-  cursor: pointer;
-  background-color: #2bffae;
-  box-shadow: 1px 1px 10px rgb(12, 255, 154);
-} */
 
 .goHome {
   font-family: "Get Schwifty";
@@ -331,7 +311,6 @@ html {
   border: 2px solid rgb(12, 255, 154);
   border-radius: 0.5rem;
   border-bottom: 2px solid rgb(164, 115, 255);
-  /* border-left: 2px solid rgb(164, 115, 255); */
   color: rgb(12, 255, 154);
   padding: 0.3rem;
   font-size: 1rem;
